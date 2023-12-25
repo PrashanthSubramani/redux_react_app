@@ -7,13 +7,13 @@ const initialState = {
     error:''
 }
 
-const BASE_URL = 'http://localhost:8000/tasks'
+const BASE_URL = 'https://note-app-data-kqdr.onrender.com/tasks'
 
 // GET Fetch
 export const getTaskFromServer = createAsyncThunk(
     "tasks/getTaskFromServer",
     async (_,{rejectWithValue})=>{
-        const response = await fetch('http://localhost:8000/tasks')
+        const response = await fetch('https://note-app-data-kqdr.onrender.com/tasks')
         if(response.ok){
             const jsonResponse = await response.json();
             return jsonResponse
